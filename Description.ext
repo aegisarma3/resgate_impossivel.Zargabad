@@ -1,0 +1,95 @@
+//#include "LxOPS\lxOPS_dlg.hpp"
+#include "taw_vd\dialog.hpp"
+
+#include "Zen_FrameworkFunctions\Zen_LoadoutFunctions\Zen_LoadoutDialog.hpp"
+
+
+
+// Classes de apoio
+class CfgNotifications {
+    #include "Zen_FrameworkFunctions\Zen_TaskSystem\Zen_TaskNotifications.hpp"
+
+    class btsInfo
+	{
+		title = "COMANDO";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		priority = 7;
+	};
+};
+
+class CfgFunctions
+{
+	#include "taw_vd\CfgFunctions.hpp"
+};
+
+
+class CfgCommunicationMenu {
+    #include "Zen_FrameworkFunctions\Zen_FireSupportSystem\Zen_FireSupportMenu.hpp"
+};
+
+class CfgMusic
+{
+	tracks[]={rescue};
+
+	class rescue
+	{
+		name = "rescue";
+		sound[] = {\Sounds\rescue.ogg, db+2, 1.0};
+        };
+
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "A missão falhou";
+		subtitle = "Seu esquadrão foi eliminado.";
+		description = "O governo alega não ter conhecimento de você e de sua tropa.";
+		//pictureBackground = "signs\logo.paa";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class End2
+	{
+		title = "Missão Cumprida";
+		subtitle = "Eliminou os sequestradores";
+		description = "Mesmo contra ordens superiores, seu esquadrão eliminou os sequestradores do jornalista. A corte marcial os aguarda, mas a justiça foi feita.";
+		//pictureBackground = "signs\logo.paa";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
+
+
+
+
+
+
+
+author = "Toaster[BTS]";
+onLoadName = "Deserto Negro";
+onLoadMission = "“Lamento enormemente os ataques aéreos contra o Estado Islâmico. O Brasil sempre vai acreditar que a melhor forma é o diálogo, o acordo e a intermediação da ONU.” - Dilma Rousseff";
+loadScreen = "Images\rescue.jpg";
+overviewPicture = "Images\rescue.jpg";
+overviewText = "“Lamento enormemente os ataques aéreos contra o Estado Islâmico. O Brasil sempre vai acreditar que a melhor forma é o diálogo, o acordo e a intermediação da ONU.” - Dilma Rousseff";
+respawn = 1;
+//respawnDelay = 40;
+//respawnDialog = 1;
+//respawnOnStart = 0;
+enableDebugConsole = 1;
+DisabledAI = false;
+
+
+
+
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 50;
+};
+
+
+
+
